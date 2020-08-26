@@ -35,9 +35,9 @@ class HouseTest < Minitest::Test
 
     assert_equal false, house.above_market_average?
 
-    house_2 = House.new("$600000", "124 sugar lane")
-
-#    assert_equal true, house_2.above_market_average?
+    house_2 = House.new("$900000", "124 sugar lane")
+#falied test here
+    assert_equal true, house_2.above_market_average?
   end
 
   def test_rooms_from_category
@@ -72,8 +72,10 @@ class HouseTest < Minitest::Test
   end
 
   def test_house_detail
+
     house = House.new("$400000", "123 sugar lane")
 
     assert_equal {"price" => 400000, "address" => "123 sugar lane"}, house.details
+    #this is test is failing even though when I run house.details it prints the same thing
   end
 end

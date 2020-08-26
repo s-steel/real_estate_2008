@@ -32,8 +32,8 @@ class House
   end
 
   def details
-    house_hash = {}
-    house.price.to_i
-    
+    house_hash = Hash.new
+    new_price = price.delete("$").to_i
+    house_hash = {"price" => new_price, "address" => address}
   end
 end
