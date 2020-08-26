@@ -74,8 +74,8 @@ class HouseTest < Minitest::Test
   def test_house_detail
 
     house = House.new("$400000", "123 sugar lane")
+    test_hash = {"price" => 400000, "address" => "123 sugar lane"}
+    assert_equal test_hash, house.details
 
-    assert_equal {"price" => 400000, "address" => "123 sugar lane"}, house.details
-    #this is test is failing even though when I run house.details it prints the same thing
   end
 end
