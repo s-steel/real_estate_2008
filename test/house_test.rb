@@ -36,7 +36,7 @@ class HouseTest < Minitest::Test
     assert_equal false, house.above_market_average?
 
     house_2 = House.new("$900000", "124 sugar lane")
-#falied test here
+
     assert_equal true, house_2.above_market_average?
   end
 

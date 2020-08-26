@@ -11,12 +11,7 @@ class House
   end
 
   def above_market_average?
-    if price.to_i <= 500000
-      false
-    else
-    price.to_i > 500000
-      true
-    end
+    price.delete("$").to_i > 500000
   end
 
   def rooms_from_category(category)
